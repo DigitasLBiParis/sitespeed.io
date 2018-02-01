@@ -1,7 +1,7 @@
 {
   "name": "sitespeed.io",
   "bin": "./bin/sitespeed.js",
-  "version": "6.2.3",
+  "version": "6.2.4",
   "description": "Analyze the web performance of your site",
   "keywords": [
     "performance",
@@ -67,6 +67,7 @@
   },
   "main": "./lib/sitespeed.js",
   "dependencies": {
+    "@digitaslbiparis/webcoach": "1.1.2",
     "aws-sdk": "2.168.0",
     "bluebird": "3.5.0",
     "browsertime": "2.1.3",
@@ -101,7 +102,6 @@
     "tape": "4.8.0",
     "text-table": "0.2.0",
     "uuid": "^3.0.0",
-    "@digitaslbiparis/webcoach": "1.1.2",
     "webpagetest": "0.3.8",
     "yargs": "6.6.0"
   }

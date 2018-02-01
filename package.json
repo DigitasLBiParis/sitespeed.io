@@ -1,5 +1,5 @@
 {
-  "name": "sitespeed.io",
+  "name": "@digitaslbiparis/sitespeed.io",
   "bin": "./bin/sitespeed.js",
   "version": "6.2.4",
   "description": "Analyze the web performance of your site",

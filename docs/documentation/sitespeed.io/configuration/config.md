@@ -30,7 +30,7 @@ Browser
   --browsertime.chrome.android.deviceSerial                    Choose which device to use. If you do not set it, the first found device will be used.
   --browsertime.chrome.collectNetLog                           Collect network log from Chrome and save to disk.  [boolean]
   --browsertime.chrome.traceCategories                         Set the trace categories.  [string]
-  --browsertime.requestheader, -r                              Request header that will be added to the request. Add multiple instances to add multiple request headers.
+  --browsertime.requestheader, -r                              Request header that will be added to the request. Add multiple instances to add multiple request headers. Use the following format key:value
   --browsertime.block                                          Domain to block. Add multiple instances to add multiple domains that will be blocked.
   --browsertime.basicAuth, --basicAuth                         Use it if your server is behind Basic Auth. Format: username@password.
 
@@ -85,7 +85,7 @@ Metrics
 
 WebPageTest
   --webpagetest.host               The domain of your WebPageTest instance.  [default: "https://www.webpagetest.org"]
-  --webpagetest.key                The API key for your WebPageTest instance.
+  --webpagetest.key                The API key for you WebPageTest instance.
   --webpagetest.location           The location for the test  [default: "Dulles:Chrome"]
   --webpagetest.connectivity       The connectivity for the test.  [default: "Cable"]
   --webpagetest.runs               The number of runs per URL.  [default: 3]
@@ -94,6 +94,7 @@ WebPageTest
   --webpagetest.script             The WebPageTest script as a string.
   --webpagetest.includeRepeatView  Do repeat or single views  [boolean] [default: false]
   --webpagetest.private            Wanna keep the runs private or not  [boolean] [default: true]
+  --webpagetest.timeline           Activates Chrome tracing and get the devtools.timeline (only works for Chrome).  [boolean] [default: false]
 
 Slack
   --slack.hookUrl       WebHook url for the Slack team (check https://<your team>.slack.com/apps/manage/custom-integrations).

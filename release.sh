@@ -15,10 +15,10 @@ np $1
 
 PACKAGE_VERSION=$(node -e 'console.log(require("./package").version)')
 
-docker build --no-cache -t sitespeedio/sitespeed.io:$PACKAGE_VERSION -t sitespeedio/sitespeed.io:latest .
+docker build --no-cache -t digitaslbiparis/sitespeed.io:$PACKAGE_VERSION -t digitaslbiparis/sitespeed.io:latest .
 
-docker push sitespeedio/sitespeed.io:$PACKAGE_VERSION
-docker push sitespeedio/sitespeed.io:latest
+docker push digitaslbiparis/sitespeed.io:$PACKAGE_VERSION
+docker push digitaslbiparis/sitespeed.io:latest
 
 # Update to latet version in the docs
 bin/sitespeed.js --version | tr -d '\n' > docs/_includes/version/sitespeed.io.txt
@@ -26,5 +26,5 @@ bin/sitespeed.js --version | tr -d '\n' > docs/_includes/version/sitespeed.io.tx
 # Generate the help for the docs
 bin/sitespeed.js --help > docs/documentation/sitespeed.io/configuration/config.md
 
-docker build -f Dockerfile.wpr --no-cache -t sitespeedio/sitespeed.io:${PACKAGE_VERSION}-wpr-alpha .
-docker push sitespeedio/sitespeed.io:${PACKAGE_VERSION}-wpr-alpha
+docker build -f Dockerfile.wpr --no-cache -t digitaslbiparis/sitespeed.io:${PACKAGE_VERSION}-wpr-alpha .
+docker push digitaslbiparis/sitespeed.io:${PACKAGE_VERSION}-wpr-alpha

@@ -21,10 +21,10 @@ docker push digitaslbiparis/sitespeed.io:$PACKAGE_VERSION
 docker push digitaslbiparis/sitespeed.io:latest
 
 # Update to latet version in the docs
-bin/sitespeed.js --version | tr -d '\n' > docs/_includes/version/sitespeed.io.txt
+LANG=en_US.UTF-8 bin/sitespeed.js --version | tr -d '\n' > docs/_includes/version/sitespeed.io.txt
 
 # Generate the help for the docs
-bin/sitespeed.js --help > docs/documentation/sitespeed.io/configuration/config.md
+LANG=en_US.UTF-8 bin/sitespeed.js --help > docs/documentation/sitespeed.io/configuration/config.md
 
 docker build -f Dockerfile.wpr --no-cache -t digitaslbiparis/sitespeed.io:${PACKAGE_VERSION}-wpr-alpha .
 docker push digitaslbiparis/sitespeed.io:${PACKAGE_VERSION}-wpr-alpha

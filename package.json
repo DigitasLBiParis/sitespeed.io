@@ -70,7 +70,7 @@
   },
   "main": "./lib/sitespeed.js",
   "dependencies": {
-    "@digitaslbiparis/webcoach": "1.2.0",
+    "@digitaslbiparis/webcoach": "1.2.1",
     "aws-sdk": "2.168.0",
     "bluebird": "3.5.0",
     "browsertime": "2.1.4",
